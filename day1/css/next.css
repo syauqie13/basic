@@ -1,0 +1,628 @@
+/* === Import Google Fonts === */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* === Global Styles === */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #feffff;
+    color: #000;
+}
+
+
+/* === Wrapper === */
+
+.wrapper {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+}
+
+
+/* === Navigation === */
+
+nav {
+    background-color: #747e8bd3;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    height: 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin-right: 10px;
+}
+
+.menu {
+    width: 50%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* Warna awal kontras */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #fafe07;
+}
+
+
+/* === Jumbotron === */
+
+.jumbo {
+    background: url("../image/bg2.webp") center center / cover no-repeat;
+    position: relative;
+    height: 100vh;
+    font-family: "Lexend Deca", sans-serif;
+    text-shadow: 0 0 4px #000;
+}
+
+.header-opacity {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-jumbotron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-jumbotron h4 {
+    color: #def344;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-jumbotron h5 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header-jumbotron p {
+    color: #fff;
+    margin: 0 5px 20px;
+}
+
+
+/* === Button === */
+
+.button {
+    background-color: #def344;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.button-xl {
+    padding: 15px;
+    font-size: 16px;
+    color: #000;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+
+/* === Sections === */
+
+section {
+    text-align: center;
+    font-size: 25px;
+    /* margin-bottom: 25px; */
+}
+
+
+/* === Statistik === */
+
+#statistik {
+    background-color: #393e46;
+    color: #fff;
+    /* Perbaikan warna teks agar terbaca */
+    font-family: "Lexend Deca", sans-serif;
+    padding: 20px;
+}
+
+#statistik .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#statistik .wrapper > div {
+    text-align: center;
+}
+
+#statistik .wrapper > div > small {
+    font-size: 1.5rem;
+}
+
+#statistik .wrapper > div > p > img {
+    border-radius: 10px;
+    gap: 50px;
+}
+
+#letsexplore,
+#kontaksaya {
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+}
+
+.logo > span {
+    font-weight: bold;
+    color: #000;
+}
+
+
+/* === Premium Course === */
+
+#premium-course {
+    background-color: #0e1d2b;
+    color: white;
+}
+
+#premium-course > .wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#premium-course > .wrapper > h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+}
+
+#premium-course > .wrapper > h4 > span {
+    color: #def344;
+}
+
+#premium-course > .wrapper > p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+
+/* === Grid === */
+
+.grid {
+    display: grid;
+    /* grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); Lebih responsif */
+    grid-template-columns: 30% 30% 30%;
+    gap: 50px;
+}
+
+.grid > .item {
+    border: 1px solid #444;
+    background-color: #393e46;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* Hover efek */
+
+.grid > .item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Icon */
+
+.grid > .item>i {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #940494;
+    /* warna ikon */
+    transition: color 0.3s ease;
+}
+
+.grid > .item:hover > .button {
+    color: #fafe07;
+}
+
+
+/* Konten detail */
+
+.grid > .item > .item-detail {
+    padding: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+/* Judul & info kecil */
+
+.grid > .item > .item-detail > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.grid >.item > .item-detail > div > small {
+    font-size: 0.95rem;
+    color: #ddd;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.grid>.item>.item-detail>div>a {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+button,
+.button2 {
+    background-color: #def344;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+
+/* tentang saya */
+
+#tentang-saya {
+    background-color: #ffffff;
+    color: #000;
+}
+
+#tentang-saya>.wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#tentang-saya>.wrapper>h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Nunito Sans", sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#tentang-saya>.wrapper>p {
+    text-align: center;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+#tentang-saya>.wrapper>div {
+    display: flex;
+    width: 70%;
+    font-style: normal;
+    font-size: 16px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tentang-saya>.wrapper>div>.foto {
+    width: 30%;
+}
+
+#tentang-saya>.wrapper>div>.foto>img {
+    max-width: 70%;
+    border-radius: 30px;
+}
+
+#tentang-saya>.wrapper>div>.desc {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+#tentang-saya>.wrapper>div>.desc>p {
+    margin: 0px 0px 10px 0px;
+    font-size: 1.3rem;
+}
+
+#tentang-saya>.wrapper>div>.desc>.social {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+#tentang-saya>.wrapper>div>.desc>.social>a {
+    color: #00adb5;
+    font-size: large;
+}
+
+
+/* free course */
+
+#free-course {
+    background-color: #0e1d2b;
+    color: white;
+}
+
+#free-course>.wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#free-course>.wrapper>h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+}
+
+#free-course>.wrapper>h4>span {
+    color: #def344;
+}
+
+#free-course>.wrapper>p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+#free-course>.wrapper>.grid>.item {
+    background-color: #222831;
+    margin: 0px;
+    padding: 0px;
+}
+
+#free-course>.wrapper>.grid>.item>.item-detail {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+#free-course>.wrapper>.grid>.item>.item-detail>img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#free-course>.wrapper>.grid>.item>.item-detail>div {
+    padding: 10px 20px 10px 20px;
+}
+
+
+/* === Footer === */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #27374d;
+    color: white;
+}
+
+
+/* hamburger-menu */
+
+button.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+button.hamburger-menu {
+    color: white;
+    font-size: 1.5rem;
+}
+
+button.hamburger-menu>i.icon-close {
+    display: none;
+}
+
+
+/* 10024, 900, 700, 600, 450 */
+
+
+/* === Responsive Design === */
+
+
+/* Tablet Landscape */
+
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 30px;
+    }
+    .menu {
+        width: 60%;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    #tentang-saya>.wrapper>div {
+        width: 90%;
+    }
+}
+
+
+/* Tablet Portrait & HP besar */
+
+@media (max-width: 768px) {
+    nav .wrapper {
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    /* Hamburger button di kanan */
+    button.hamburger-menu {
+        display: inline-block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+    }
+    /* Menu disembunyikan awalnya */
+    .menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #747e8bd3;
+    }
+    .tampil {
+        display: inline;
+    }
+    .tampil>ul {
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        position: fixed;
+        top: 80px;
+    }
+    /* Menu aktif setelah klik hamburger */
+    .menu.active {
+        display: block;
+    }
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #tentang-saya>.wrapper>div {
+        flex-direction: column;
+        text-align: center;
+    }
+    #tentang-saya>.wrapper>div>.desc {
+        width: 100%;
+    }
+    #tentang-saya>.wrapper>div>.foto {
+        width: 80%;
+        border-radius: 200px;
+    }
+    #tentang-saya>.wrapper>div>.desc>.social {
+        width: 60%;
+        margin: auto;
+        justify-content: space-around;
+    }
+    form {
+        max-width: 90%;
+    }
+    /* Statistik responsif */
+    #statistik .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #statistik .wrapper>div {
+        width: 80%;
+    }
+    #statistik .wrapper>div>small {
+        font-size: 1.3rem;
+    }
+    #statistik .wrapper>div>p>img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .logo > img {
+        height: 60px;
+    }
+}
+
+
+/* HP kecil */
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 20px;
+    }
+    .header-jumbotron h4 {
+        font-size: 1.5rem;
+    }
+    .header-jumbotron h5 {
+        font-size: 2rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    #tentang-saya>.wrapper>div>.desc>p {
+        font-size: 1rem;
+    }
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
